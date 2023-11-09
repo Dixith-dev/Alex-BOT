@@ -59,6 +59,7 @@ async def on_message(message):
         except Exception as e:
             print(f"Error occurred: {e}")
             await message.channel.send("Sorry, I was unable to process your question.")
-
+    
+    await bot.process_commands(message)  # This line is crucial
 
 bot.run(TOKEN)
